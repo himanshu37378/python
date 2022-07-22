@@ -30,6 +30,30 @@ print("Name: ", obj.name)
 obj.Age()
 
 
+########################################################################################################################
+
+# Get and Set method to access private variables
+class Person:
+    def _init_(self, name, age):
+        self.name = name
+        self.__age = age
+
+    def display(self):
+        print(self.name)
+        print(self.__age)
+
+    def getAge(self):
+        print(self.__age)
+
+    def setAge(self, age):
+        self.__age = age
+
+
+person = Person("Himanshu", 18)
+person.display()
+person.setAge(20)
+
+
 ###################################################################################
 
 #abstration
